@@ -34,11 +34,10 @@ pipeline {
                    git config --global user.email "ghkim.dev@gmail.com"
                    git add deployment.yaml
                    git commit -m "Update deployment.yaml"
-                   withCredentials([usernamePassword(credentialsId: 'git-credential')]) {
+                   withCredentials([gitUsernamePassword(credentialsId: 'git-credential', gitToolName: 'Default')]) {
                        git push https://github.com/ghkimdev/account-CD.git
                    }
                 """
-                
             }
         } 
     }

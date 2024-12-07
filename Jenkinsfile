@@ -36,7 +36,7 @@ pipeline {
                     git commit -m "Update deployment.yaml"
                 """
                 withCredentials([gitUsernamePassword(credentialsId: 'git-credential', gitToolName: 'Default')]) {
-                    git push https://github.com/ghkimdev/account-CD.git
+                    sh 'git push https://github.com/ghkimdev/account-CD.git main'
                 }
             }
         } 

@@ -36,7 +36,7 @@ pipeline {
                    git commit -m "Update deployment.yaml"
                    git push origin main
                 """
-                }
+                
             }
         }
       

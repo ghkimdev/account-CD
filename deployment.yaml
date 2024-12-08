@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: account:1.0.0-76
+  name: account:1.0.0-77
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: account:1.0.0-76
+      app: account:1.0.0-77
   template:
     metadata:
       labels:
-        app: account:1.0.0-76
+        app: account:1.0.0-77
     spec:
       containers:
-        - name: account:1.0.0-76
-          image: ghkimdev/account:1.0.0-76
+        - name: account:1.0.0-77
+          image: ghkimdev/account:1.0.0-77
           ports:
             - containerPort: 8080

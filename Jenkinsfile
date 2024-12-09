@@ -11,7 +11,6 @@ pipeline {
                     slackSend channel: 'jenkins-noti', color: 'good', message: "${env.JOB_NAME} - #${env.BUILD_NUMBER} Started by ${env.USER} (<${env.BUILD_URL}|Open>)", tokenCredentialId: 'slack-credential'
                 }
             }
-       }
         stage("Cleanup Workspace") {
             steps {
                 cleanWs()
